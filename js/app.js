@@ -1,20 +1,3 @@
-var app = app || {};
-
-app.personModel = Backbone.Model.extend({
-    defaults: {
-        name  : "",
-        age   : "0",
-        gender: "unknown",
-        img   : "images/placeholder.jpg",
-        link  : "#"
-    },
-    initialize: function(){
-        this.on("change:name",function(){
-            console.log(this.get("name") + " has changed");
-        });
-    }
-});
-
 var person1 = new app.personModel({
     name  : "Person 01",
     age   : "30",
@@ -39,9 +22,8 @@ var person3 = new app.personModel({
     link  : "#"
 });
 
-//change the name
-person2.set("name", "Person 000002");
+var groupPerson = new app.personCollection([
+    person1, person2, person3
+]);
 
-console.log(person1.toJSON());
-console.log(person2.toJSON());
-console.log(person3.get("img"));
+console.log(groupPerson.toJSON());
