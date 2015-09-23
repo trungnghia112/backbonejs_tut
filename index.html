@@ -20,6 +20,21 @@
 </head>
 <body>
 
+<script id="itemPerson" type="text/template">
+    <div class="media">
+        <div class="media-left media-middle">
+            <a href="<%= link %>"><img class="media-object" width="100" src="<%= img %>" alt="<%= name %>"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading"><%= name %></h4>
+            <ul>
+                <li>Age: <%= age %></li>
+                <li>Gender: <%= gender %></li>
+            </ul>
+        </div>
+    </div>
+</script>
+
 <script src="js/models/personModel.js"></script>
 <script src="js/collections/personCollection.js"></script>
 <script src="js/app.js"></script>
