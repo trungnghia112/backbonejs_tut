@@ -26,4 +26,8 @@ var groupPerson = new app.personCollection([
     person1, person2, person3
 ]);
 
-console.log(groupPerson.toJSON());
+var templatePerson = new app.allPersonView({
+    collection: groupPerson
+})
+
+$("#listPerson").html(templatePerson.render().el);
