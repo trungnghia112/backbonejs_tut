@@ -3,7 +3,8 @@ var person1 = new app.personModel({
     age   : "30",
     gender: "male",
     img   : "images/01.png",
-    link  : "#"
+    link  : "1",
+    detail: "Person 01 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, at deserunt dolor dolorum earum enim eos id illum numquam provident quae quibusdam, quo recusandae rem repudiandae sapiente sunt ut voluptatem!"
 });
 
 var person2 = new app.personModel({
@@ -11,7 +12,8 @@ var person2 = new app.personModel({
     age   : "20",
     gender: "male",
     img   : "images/02.png",
-    link  : "#"
+    link  : "2",
+    detail: "Person 02 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, at deserunt dolor dolorum earum enim eos id illum numquam provident quae quibusdam, quo recusandae rem repudiandae sapiente sunt ut voluptatem!"
 });
 
 var person3 = new app.personModel({
@@ -19,7 +21,8 @@ var person3 = new app.personModel({
     age   : "25",
     gender: "female",
     img   : "images/03.png",
-    link  : "#"
+    link  : "3",
+    detail: "Person 03 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, at deserunt dolor dolorum earum enim eos id illum numquam provident quae quibusdam, quo recusandae rem repudiandae sapiente sunt ut voluptatem!"
 });
 
 var groupPerson = new app.personCollection([
@@ -31,3 +34,7 @@ var templatePerson = new app.allPersonView({
 })
 
 $("#listPerson").html(templatePerson.render().el);
+
+var routerPerson = new app.personRouter();
+
+Backbone.history.start();

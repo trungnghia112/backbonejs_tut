@@ -6,7 +6,8 @@ app.personModel = Backbone.Model.extend({
         age   : "0",
         gender: "unknown",
         img   : "images/placeholder.jpg",
-        link  : "#"
+        link  : "",
+        detail: ""
     },
     initialize: function(){
         this.on("change:name",function(){
