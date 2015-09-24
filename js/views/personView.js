@@ -9,5 +9,18 @@ app.personView = Backbone.View.extend({
     render: function() {
         this.$el.html(this.template(this.model.attributes));
         return this;
+    },
+
+    events: {
+        'mouseover': 'addBgColor',
+        'mouseout' : 'removeBgColor'
+    },
+
+    addBgColor: function(){
+        this.$el.css("background-color","lightblue");
+    },
+
+    removeBgColor: function(){
+        this.$el.css("background-color","transparent");
     }
 })
