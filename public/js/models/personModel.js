@@ -13,5 +13,11 @@ app.personModel = Backbone.Model.extend({
         this.on("change:name",function(){
             console.log(this.get("name") + " has changed");
         });
-    }
+    },
+    urlRoot: "/persons"
 });
+
+// create : post   /persons
+// read   : get    /persons:id
+// update : put    /persons:id
+// destroy: delete /persons:id
