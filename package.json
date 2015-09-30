@@ -1,0 +1,24 @@
+{
+  "name": "BackboneJs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trungnghia112/backbonejs_tut.git"
+  },
+  "author": "trungnghia112",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trungnghia112/backbonejs_tut/issues"
+  },
+  "homepage": "https://github.com/trungnghia112/backbonejs_tut",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}
